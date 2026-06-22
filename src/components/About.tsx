@@ -30,22 +30,22 @@ export default function About({ setCurrentPage }: AboutProps) {
     <div id="about_page_container" className="bg-[#faf9f6] text-[#1c1c1c] pt-24 min-h-screen">
       
       {/* Editorial Header Section */}
-      <section className="relative py-20 px-6 max-w-7xl mx-auto border-b border-stone-200/50">
-        <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block animate-pulse">
+      <section className="relative py-12 md:py-20 px-6 max-w-7xl mx-auto border-b border-stone-200/50">
+        <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-3 block animate-pulse">
           About The Studio / Philosophy
         </span>
-        <h1 className="text-4xl md:text-6xl font-sans font-extrabold tracking-tight text-stone-900 leading-[1.08] max-w-4xl mb-6">
+        <h1 className="text-clamp-hero font-sans font-extrabold tracking-tight text-stone-900 max-w-4xl mb-6">
           Constructing Timeless <span className="text-[#b2946c] italic font-serif">Sanctuaries</span> For Mind & Sight
         </h1>
-        <p className="text-stone-500 text-sm md:text-base leading-relaxed max-w-2xl font-sans">
+        <p className="text-clamp-body text-stone-500 max-w-2xl font-sans">
           Mysticape Concepts Pvt. Ltd. represents a forward-thinking interior design and contracting firm specializing in immersive, functional spaces. Founded by Ashish Juneja, we seamlessly blend innovation, aesthetics, and precision to transform blueprints into bold, purposeful environments across commercial, residential, and hospitality sectors.
         </p>
       </section>
 
       {/* Two and Two layout - Narrative Content & Visual Panel */}
-      <section className="py-20 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <section className="py-12 md:py-20 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start">
         <div className="order-2 lg:order-1 flex flex-col space-y-6 lg:sticky lg:top-24">
-          <h2 className="text-3xl font-sans font-bold tracking-tight text-[#1c1c1c]">
+          <h2 className="text-clamp-section font-sans font-bold tracking-tight text-[#1c1c1c]">
             Our Vision & Mission
           </h2>
           <p className="text-stone-500 text-xs md:text-sm leading-relaxed">
@@ -54,13 +54,13 @@ export default function About({ setCurrentPage }: AboutProps) {
           <p className="text-stone-500 text-xs md:text-sm leading-relaxed">
             <strong>Our Vision:</strong> To be a trusted partner in transforming and maintaining spaces through innovative interior solutions, efficient facility management, and integrated safety systems, delivering environments that are not only visually refined but also secure, compliant, and built for long-term performance.
           </p>
-          <div className="flex space-x-4 pt-4 border-t border-stone-200/40">
+          <div className="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 pt-4 border-t border-stone-200/40">
             <div>
-              <span className="text-[#b2946c] font-sans text-3xl font-extrabold block">100+</span>
+              <span className="text-[#b2946c] font-sans font-extrabold block text-clamp-stat">100+</span>
               <span className="text-stone-400 font-mono text-[9px] uppercase tracking-widest mt-1 block">Corporate Clients</span>
             </div>
-            <div className="pl-6 border-l border-stone-200">
-              <span className="text-[#b2946c] font-sans text-3xl font-extrabold block">Millions</span>
+            <div className="sm:pl-8 sm:border-l border-stone-200">
+              <span className="text-[#b2946c] font-sans font-extrabold block text-clamp-stat">Millions</span>
               <span className="text-stone-400 font-mono text-[9px] uppercase tracking-widest mt-1 block">Sq. Ft. Handed Over</span>
             </div>
           </div>

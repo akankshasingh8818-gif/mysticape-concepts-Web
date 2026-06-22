@@ -16,7 +16,7 @@ export default function Founder({ setCurrentPage }: FounderProps) {
         <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block animate-pulse">
           Atelier Leadership / Founder
         </span>
-        <h1 className="text-4xl md:text-5xl font-sans font-black tracking-tight text-stone-900 leading-tight mb-4 uppercase">
+        <h1 className="text-clamp-section font-sans font-black tracking-tight text-stone-900 mb-4 uppercase">
           The Principal
         </h1>
         <p className="text-stone-500 text-xs md:text-sm leading-relaxed max-w-2xl font-sans">

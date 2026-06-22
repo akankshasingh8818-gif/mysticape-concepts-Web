@@ -27,7 +27,7 @@ export default function Services({ setCurrentPage, onSelectService }: ServicesPr
         <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block">
           Our Capabilites / Services
         </span>
-        <h1 className="text-4xl md:text-5xl font-sans font-black tracking-tight text-stone-900 leading-tight max-w-2xl mb-4">
+        <h1 className="text-clamp-section font-sans font-black tracking-tight text-stone-900 max-w-2xl mb-4">
           Bespoke Atelier Specializations
         </h1>
         <p className="text-stone-500 text-xs md:text-sm leading-relaxed max-w-2xl">

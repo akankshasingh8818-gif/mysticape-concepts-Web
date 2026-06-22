@@ -17,7 +17,7 @@ export default function Portfolio({ setCurrentPage }: PortfolioProps) {
         <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block animate-pulse">
           Project Archives / Portfolios
         </span>
-        <h1 className="text-4xl md:text-5xl font-sans font-black tracking-tight text-stone-900 mb-6 uppercase">
+        <h1 className="text-clamp-section font-sans font-black tracking-tight text-stone-900 mb-6 uppercase">
           Finished Works
         </h1>
         <p className="text-[#1c1c1c]/70 text-xs md:text-sm leading-relaxed max-w-2xl font-sans font-normal opacity-90 mb-12">

@@ -22,7 +22,7 @@ export default function Testimonials({ setCurrentPage }: TestimonialsProps) {
         <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block">
           Client Laurels / Kudos
         </span>
-        <h1 className="text-4xl md:text-5xl font-sans font-black tracking-tight text-stone-900 leading-tight mb-4 uppercase">
+        <h1 className="text-clamp-section font-sans font-black tracking-tight text-stone-900 mb-4 uppercase">
           Client Testimonials
         </h1>
         <p className="text-stone-500 text-xs md:text-sm leading-relaxed max-w-2xl font-sans">

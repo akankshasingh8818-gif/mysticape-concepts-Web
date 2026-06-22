@@ -78,10 +78,10 @@ export default function Contact() {
       
       {/* Contact Header */}
       <section className="relative py-16 px-6 max-w-7xl mx-auto border-b border-stone-200/50">
-        <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb- block animate-pulse">
+        <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block animate-pulse">
           Book Atelier meeting / Contacts
         </span>
-        <h1 className="text-4xl md:text-5xl font-sans font-black tracking-tight text-stone-900 leading-tight mb-4 uppercase">
+        <h1 className="text-clamp-section font-sans font-black tracking-tight text-stone-900 mb-4 uppercase">
           Design Interviews
         </h1>
         <p className="text-stone-500 text-xs md:text-sm leading-relaxed max-w-xl font-sans">

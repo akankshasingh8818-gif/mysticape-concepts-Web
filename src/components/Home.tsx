@@ -138,11 +138,11 @@ export default function Home({ setCurrentPage, setSelectedProject }: HomeProps) 
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-[#faf9f6] tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-clamp-hero font-sans font-extrabold text-[#faf9f6] tracking-tight mb-6">
               Engineering <span className="text-[#b2946c] italic font-serif">Silence</span> & Monumental Beauty
             </h1>
 
-            <p className="text-stone-300 text-sm md:text-base leading-relaxed max-w-xl mb-8 tracking-wide font-sans">
+            <p className="text-clamp-body text-stone-300 mb-8 max-w-xl tracking-wide font-sans">
               At Mysticape Concepts, we reject the noisy ordinary. We design monolithic structural spaces, bespoke spatial interiors, and fluid arrangements for those who value quiet luxury and the uncompromising honesty of raw premium materials.
             </p>
 
@@ -198,18 +198,25 @@ export default function Home({ setCurrentPage, setSelectedProject }: HomeProps) 
       </section>
 
       {/* 2. COMPANY STATISTICS SECTION */}
-      <section id="stats_section" className="bg-[#faf9f6] border-y border-stone-200/50 py-16">
-        <div className="w-full max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {COMPANY_STATS.map((stat, idx) => (
-            <div key={idx} id={`stat_item_${idx}`} className="flex flex-col items-center text-center p-4">
-              <span className="text-4xl md:text-5xl font-sans font-extrabold text-[#1c1c1c] tracking-tight mb-2">
-                {stat.value}
-              </span>
-              <span className="text-stone-500 font-mono text-[9px] uppercase tracking-widest max-w-[150px]">
-                {stat.label}
-              </span>
-            </div>
-          ))}
+      <section id="stats_section" className="bg-[#faf9f6] border-y border-stone-200/50 py-12 md:py-16">
+        <div className="w-full max-w-7xl mx-auto px-6 grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-8">
+          {COMPANY_STATS.map((stat, idx) => {
+            const isLong = stat.value.length > 5;
+            return (
+              <div key={idx} id={`stat_item_${idx}`} className="flex flex-col items-center text-center p-4">
+                <span className={`font-sans font-extrabold text-[#1c1c1c] tracking-tight mb-2 block ${
+                  isLong 
+                    ? "text-2xl xs:text-3xl lg:text-[36px] leading-tight" 
+                    : "text-clamp-stat"
+                }`}>
+                  {stat.value}
+                </span>
+                <span className="text-stone-500 font-mono text-[9px] uppercase tracking-widest max-w-[150px] leading-relaxed">
+                  {stat.label}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </section>
 

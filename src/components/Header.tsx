@@ -219,10 +219,10 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
           <button
             id="mobile_menu_trigger_unf"
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-[#1c1c1c] focus:outline-none transition-transform active:scale-95"
+            className="lg:hidden w-11 h-11 flex items-center justify-center text-[#1c1c1c] focus:outline-none transition-transform active:scale-95 hover:bg-stone-100/50 rounded-full"
             aria-label="Toggle Navigation Screen"
           >
-            {isOpen ? <X className="w-5.5 h-5.5" /> : <Menu className="w-5.5 h-5.5" />}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
         </div>
@@ -251,7 +251,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                       <button
                         id={`mobile_nav_item_${item.value}`}
                         onClick={() => handleNav(item.value)}
-                        className={`text-sm font-sans font-medium tracking-[0.2em] uppercase py-2 focus:outline-none transition-colors ${
+                        className={`text-sm font-sans font-medium tracking-[0.2em] uppercase py-3 focus:outline-none transition-colors ${
                           isActive ? "text-[#b2946c]" : "text-[#1c1c1c]"
                         }`}
                       >
@@ -262,7 +262,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                       <div className="flex flex-row space-x-2 pb-2">
                         <button
                           onClick={() => handleNav("portfolio-residential")}
-                          className={`text-[8.5px] font-sans font-bold tracking-[0.15em] uppercase px-3 py-1.5 border border-stone-250/20 rounded-xs transition-colors ${
+                          className={`text-[9px] font-sans font-bold tracking-[0.15em] uppercase px-4 py-2.5 border border-stone-200 rounded-sm transition-colors ${
                             currentPage === "portfolio-residential" ? "bg-[#1c1c1c] text-white border-[#1c1c1c]" : "bg-white/80 text-stone-500"
                           }`}
                         >
@@ -270,7 +270,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                         </button>
                         <button
                           onClick={() => handleNav("portfolio-commercial")}
-                          className={`text-[8.5px] font-sans font-bold tracking-[0.15em] uppercase px-3 py-1.5 border border-stone-250/20 rounded-xs transition-colors ${
+                          className={`text-[9px] font-sans font-bold tracking-[0.15em] uppercase px-4 py-2.5 border border-stone-200 rounded-sm transition-colors ${
                             currentPage === "portfolio-commercial" ? "bg-[#1c1c1c] text-white border-[#1c1c1c]" : "bg-white/80 text-stone-500"
                           }`}
                         >
@@ -286,7 +286,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
                     key={item.value}
                     id={`mobile_nav_item_${item.value}`}
                     onClick={() => handleNav(item.value)}
-                    className={`text-sm font-sans font-medium tracking-[0.2em] uppercase py-2 focus:outline-none transition-colors ${
+                    className={`text-sm font-sans font-medium tracking-[0.2em] uppercase py-3 focus:outline-none transition-colors ${
                       isActive ? "text-[#b2946c]" : "text-[#1c1c1c]"
                     }`}
                   >

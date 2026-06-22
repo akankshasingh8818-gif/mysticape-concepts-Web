@@ -60,7 +60,7 @@ export default function Blog({ setCurrentPage, selectedBlogArticle, setSelectedB
           <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block">
             {selectedBlogArticle.category} — {selectedBlogArticle.readTime}
           </span>
-          <h1 className="text-3xl md:text-5xl font-sans font-black tracking-tight text-stone-950 leading-tight mb-6">
+          <h1 className="text-clamp-section font-sans font-black tracking-tight text-stone-950 mb-6">
             {selectedBlogArticle.title}
           </h1>
 
@@ -174,7 +174,7 @@ export default function Blog({ setCurrentPage, selectedBlogArticle, setSelectedB
         <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block">
           The Mysticape Journal
         </span>
-        <h1 className="text-4xl md:text-5xl font-sans font-black tracking-tight text-stone-950 leading-tight max-w-3xl mb-4">
+        <h1 className="text-clamp-section font-sans font-black tracking-tight text-stone-955 max-w-3xl mb-4">
           Atmospheres / Thoughts / Details
         </h1>
         <p className="text-stone-500 text-xs md:text-sm leading-relaxed max-w-2xl">

@@ -57,7 +57,7 @@ export default function FAQPage({ setCurrentPage }: FAQPageProps) {
         <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block">
           Client Support Atelier
         </span>
-        <h1 className="text-4xl md:text-5xl font-sans font-black tracking-tight text-stone-950 leading-tight max-w-2xl mb-4">
+        <h1 className="text-clamp-section font-sans font-black tracking-tight text-stone-955 max-w-2xl mb-4">
           Uncompromised Clarity
         </h1>
         <p className="text-stone-500 text-xs md:text-sm leading-relaxed max-w-2xl">
