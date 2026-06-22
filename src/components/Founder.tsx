@@ -1,5 +1,7 @@
 import { Page } from "../types";
 import { ArrowRight, Compass, Flame, Mail, Award } from "lucide-react";
+// @ts-ignore
+import founderImage from "../assets/images/regenerated_image_1782126105209.png";
 
 interface FounderProps {
   setCurrentPage: (page: Page) => void;
@@ -27,9 +29,9 @@ export default function Founder({ setCurrentPage }: FounderProps) {
         
         {/* Visual Founder representation Column */}
         <div className="lg:col-span-5 relative">
-          <div className="relative h-[400px] md:h-[500px] shadow-xl overflow-hidden rounded-xs">
+          <div className="relative h-[960px] shadow-xl overflow-hidden rounded-xs">
             <img
-              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1000&q=80"
+              src={founderImage}
               alt="Ashish Juneja - Founder & Director"
               className="w-full h-full object-cover grayscale-[10%]"
               referrerPolicy="no-referrer"
