@@ -1,0 +1,6 @@
+{
+  "name": "Mysticape Concepts",
+  "description": "Premium luxury architecture, space planning, and bespoke interior design studio for high-end residential and commercial projects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

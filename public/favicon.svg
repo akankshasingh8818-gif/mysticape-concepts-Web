@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf2d9" />
+      <stop offset="35%" stop-color="#b2946c" />
+      <stop offset="70%" stop-color="#7c6040" />
+      <stop offset="100%" stop-color="#b2946c" />
+    </linearGradient>
+  </defs>
+  <!-- Subtle center glow -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="url(#gold)" stroke-width="1.8" />
+  <!-- Sweeping wireframe rings to mimic the spherical cage -->
+  <ellipse cx="48" cy="52" rx="44" ry="22" fill="none" stroke="url(#gold)" stroke-width="1.3" transform="rotate(-15 48 52)" />
+  <ellipse cx="52" cy="48" rx="44" ry="18" fill="none" stroke="url(#gold)" stroke-width="1.3" transform="rotate(35 52 48)" />
+  <ellipse cx="49" cy="51" rx="43" ry="14" fill="none" stroke="url(#gold)" stroke-width="1.3" transform="rotate(-55 49 51)" />
+  <ellipse cx="51" cy="49" rx="44" ry="26" fill="none" stroke="url(#gold)" stroke-width="1.1" transform="rotate(65 51 49)" />
+  <ellipse cx="50" cy="50" rx="45" ry="8" fill="none" stroke="url(#gold)" stroke-width="1.3" transform="rotate(-115 50 50)" />
+  <ellipse cx="47" cy="53" rx="41" ry="32" fill="none" stroke="url(#gold)" stroke-width="1" transform="rotate(135 47 53)" />
+  <ellipse cx="53" cy="47" rx="42" ry="12" fill="none" stroke="url(#gold)" stroke-width="1.2" transform="rotate(-45 53 47)" />
+  <circle cx="50" cy="50" r="48" fill="none" stroke="url(#gold)" stroke-width="0.5" stroke-dasharray="1 4" opacity="0.6" />
+</svg>
