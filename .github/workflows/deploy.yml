@@ -38,6 +38,17 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/         # We deploy the optimized web assets folder
+          
+          # =======================================================================================
+          # DETECT YOUR FTP TARGET DIRECTORY (Choose Option A or Option B based on your FTP account setup)
+          #
+          # OPTION A: If your FTP account is the "Main" administrator account (displays "domains" folder when logging in)
+          # server-dir: domains/mysticapeconcepts.com/public_html/
+          #
+          # OPTION B: If your FTP account was created specifically for this domain and is scoped directly to "public_html"
+          # server-dir: ./
+          # =======================================================================================
           server-dir: domains/mysticapeconcepts.com/public_html/
+          
           protocol: ftp              # Standard Hostinger FTP protocol
           port: 21                   # Default FTP port
