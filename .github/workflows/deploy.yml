@@ -38,8 +38,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/         # We deploy the optimized web assets folder
-          # NOTE: If your FTP account is scoped directly to "public_html", use "./"
-          # If using Hostinger's main root FTP account, use "public_html/"
-          server-dir: ./
+          server-dir: domains/mysticapeconcepts.com/public_html/
           protocol: ftp              # Standard Hostinger FTP protocol
           port: 21                   # Default FTP port
