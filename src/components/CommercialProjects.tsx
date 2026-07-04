@@ -20,6 +20,20 @@ import image_retail_aura from "../assets/images/regenerated_image_1781793397599.
 import image_retail_concept from "../assets/images/regenerated_image_1781793399995.jpg";
 // @ts-ignore
 import image_retail_atelier from "../assets/images/regenerated_image_1781793402136.jpg";
+// @ts-ignore
+import concept_lighting_study from "../assets/images/regenerated_image_1783163476674.jpg";
+// @ts-ignore
+import concept_material_board from "../assets/images/regenerated_image_1781792692149.jpg";
+// @ts-ignore
+import concept_raw_concrete from "../assets/images/regenerated_image_1781792694499.jpg";
+// @ts-ignore
+import concept_acoustic_panels from "../assets/images/regenerated_image_1781792857486.jpg";
+// @ts-ignore
+import concept_executive_suite from "../assets/images/regenerated_image_1781792864248.jpg";
+// @ts-ignore
+import concept_atrium_lounge from "../assets/images/regenerated_image_1783163614967.jpg";
+// @ts-ignore
+import image_linear_suites from "../assets/images/regenerated_image_1783163614967.jpg";
 
 interface CommercialProjectsProps {
   setCurrentPage?: (page: any) => void;
@@ -37,6 +51,13 @@ interface GalleryImage {
 }
 
 const COMMERCIAL_GALLERY_IMAGES: GalleryImage[] = [
+  {
+    id: "comm-img-linear-suites",
+    title: "Linear Modular Hot Desking & Agile Suites",
+    client: "Evolve Ventures Noida",
+    src: image_linear_suites,
+    categories: ["Offices", "Corporate Spaces"]
+  },
   {
     id: "comm-img-biophilic",
     title: "Biophilic Forest Nook",
@@ -109,10 +130,56 @@ const COMMERCIAL_GALLERY_IMAGES: GalleryImage[] = [
   }
 ];
 
+const CONCEPT_STUDY_IMAGES = [
+  {
+    id: "concept-lighting",
+    title: "Chiaroscuro & Sculptural Lighting",
+    desc: "A simulation analyzing natural shadow paths and custom recessed ambient warm LEDs within fluted partition columns.",
+    src: concept_lighting_study,
+    type: "Lighting Simulation"
+  },
+  {
+    id: "concept-material",
+    title: "Organic Travertine & Cast Brass",
+    desc: "Tactile moodboard exploring pairings of open-pore Italian travertine with raw acid-etched industrial brass accents.",
+    src: concept_material_board,
+    type: "Material Moodboard"
+  },
+  {
+    id: "concept-brutalist",
+    title: "Monolithic Structural Columns",
+    desc: "A brutalist study celebrating exposed high-strength raw concrete textures contrasting with elegant minimalist frames.",
+    src: concept_raw_concrete,
+    type: "Structural Rendering"
+  },
+  {
+    id: "concept-acoustic",
+    title: "Micro-Slat Timber Acoustics",
+    desc: "Computational model for sound absorption wall structures integrating warm red oak timber slatted layouts.",
+    src: concept_acoustic_panels,
+    type: "Acoustic Architecture"
+  },
+  {
+    id: "concept-executive",
+    title: "Vanguard Executive Lounge",
+    desc: "Proposed layout detailing custom floating walnut wood desks, concealed storage drawers, and hand-woven wool rugs.",
+    src: concept_executive_suite,
+    type: "Spatial Layout"
+  },
+  {
+    id: "concept-workspace-layout",
+    title: "Turnkey Modular Workstation Draft",
+    desc: "Drafting plan layout for dense, comfortable hot desking suites featuring noise-dampening acoustic partition screens and integrated digital cable highways.",
+    src: concept_atrium_lounge,
+    type: "Workspace Layout Study"
+  }
+];
+
 export default function CommercialProjects({ setCurrentPage }: CommercialProjectsProps) {
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const [filteredImages, setFilteredImages] = useState<GalleryImage[]>(COMMERCIAL_GALLERY_IMAGES);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [conceptLightboxIndex, setConceptLightboxIndex] = useState<number | null>(null);
 
   // Filter images based on active category
   useEffect(() => {
@@ -142,6 +209,24 @@ export default function CommercialProjects({ setCurrentPage }: CommercialProject
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [lightboxIndex, filteredImages]);
+
+  // Keyboard navigation for Concept Lightbox modal
+  useEffect(() => {
+    if (conceptLightboxIndex === null) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") {
+        setConceptLightboxIndex((prev) => (prev !== null ? (prev + 1) % CONCEPT_STUDY_IMAGES.length : null));
+      } else if (e.key === "ArrowLeft") {
+        setConceptLightboxIndex((prev) => (prev !== null ? (prev - 1 + CONCEPT_STUDY_IMAGES.length) % CONCEPT_STUDY_IMAGES.length : null));
+      } else if (e.key === "Escape") {
+        setConceptLightboxIndex(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [conceptLightboxIndex]);
 
   const filters = [
     { label: "All Commercial", value: "all" },
@@ -239,6 +324,64 @@ export default function CommercialProjects({ setCurrentPage }: CommercialProject
         )}
       </section>
 
+      {/* Concept Renderings & Spatial Studies Section */}
+      <section className="py-20 px-6 max-w-7xl mx-auto border-t border-stone-200/50 mt-12">
+        <div className="flex flex-col items-start mb-12">
+          <span className="text-[#b2946c] font-mono text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block animate-pulse">
+            Atelier Concept Archives / Behind the Blueprint
+          </span>
+          <h2 className="text-clamp-section font-sans font-black tracking-tight text-stone-900 mb-4 uppercase">
+            Concept Studies & Material Moodboards
+          </h2>
+          <p className="text-[#1c1c1c]/70 text-xs md:text-sm leading-relaxed max-w-2xl font-sans">
+            In our turnkey process, every structure begins as an in-depth spatial study. Explore our archive of digital lighting simulations, experimental acoustic patterns, and physical material palettes.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {CONCEPT_STUDY_IMAGES.map((concept, index) => (
+            <div
+              key={concept.id}
+              id={`concept_gallery_item_${index}`}
+              className="group relative bg-white border border-stone-200/60 rounded-xs overflow-hidden shadow-xs hover:shadow-lg transition-all duration-500 flex flex-col cursor-pointer"
+              onClick={() => setConceptLightboxIndex(index)}
+            >
+              {/* Image Container with Zoom effect */}
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-stone-100">
+                <img
+                  src={concept.src}
+                  alt={`${concept.title} - ${concept.type} by Mysticape Concepts`}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="bg-[#1c1c1c] text-white text-[8px] font-mono tracking-widest uppercase px-2.5 py-1 rounded-xs">
+                    {concept.type}
+                  </span>
+                </div>
+                {/* Hover overlay icon */}
+                <div className="absolute inset-0 bg-stone-950/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="bg-white/95 p-2.5 rounded-full shadow-md transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                    <Maximize2 className="w-3.5 h-3.5 text-stone-900" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Text info */}
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="font-sans font-extrabold text-stone-900 text-sm tracking-tight mb-2 group-hover:text-[#b2946c] transition-colors">
+                  {concept.title}
+                </h3>
+                <p className="text-stone-500 text-xs leading-relaxed font-sans flex-grow">
+                  {concept.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Lightbox Modal */}
       {lightboxIndex !== null && (
         <div
@@ -297,6 +440,82 @@ export default function CommercialProjects({ setCurrentPage }: CommercialProject
             {/* Index Counter */}
             <span className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-xs text-stone-300 text-[10px] font-mono tracking-widest px-3 py-1.5 uppercase select-none rounded-xs">
               {lightboxIndex + 1} / {filteredImages.length}
+            </span>
+          </div>
+        </div>
+      )}
+
+      {/* Concept Lightbox Modal */}
+      {conceptLightboxIndex !== null && (
+        <div
+          id="concept_lightbox_modal"
+          className="fixed inset-0 z-50 bg-[#1c1c1c]/95 backdrop-blur-md flex items-center justify-center select-none"
+          onClick={() => setConceptLightboxIndex(null)}
+        >
+          {/* Close Button */}
+          <button
+            id="close_concept_lightbox_btn"
+            onClick={() => setConceptLightboxIndex(null)}
+            className="absolute top-6 right-6 p-2.5 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors cursor-pointer focus:outline-none focus:ring-1 focus:ring-white/50 z-50"
+            aria-label="Close concept lightbox"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          {/* Left Arrow */}
+          <button
+            id="prev_concept_lightbox_btn"
+            onClick={(e) => {
+              e.stopPropagation();
+              setConceptLightboxIndex((prev) => (prev !== null ? (prev - 1 + CONCEPT_STUDY_IMAGES.length) % CONCEPT_STUDY_IMAGES.length : null));
+            }}
+            className="absolute left-6 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all cursor-pointer focus:outline-none focus:ring-1 focus:ring-white/50 z-50 active:scale-95"
+            aria-label="Previous concept"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            id="next_concept_lightbox_btn"
+            onClick={(e) => {
+              e.stopPropagation();
+              setConceptLightboxIndex((prev) => (prev !== null ? (prev + 1) % CONCEPT_STUDY_IMAGES.length : null));
+            }}
+            className="absolute right-6 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all cursor-pointer focus:outline-none focus:ring-1 focus:ring-white/50 z-50 active:scale-95"
+            aria-label="Next concept"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Image & Caption Viewport */}
+          <div 
+            className="relative max-w-[90vw] max-h-[85vh] flex flex-col items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={CONCEPT_STUDY_IMAGES[conceptLightboxIndex].src}
+              alt={CONCEPT_STUDY_IMAGES[conceptLightboxIndex].title}
+              className="max-w-full max-h-[70vh] object-contain shadow-2xl transition-all duration-300 animate-fadeIn"
+              referrerPolicy="no-referrer"
+            />
+
+            {/* Captions */}
+            <div className="mt-4 text-center max-w-xl px-4">
+              <span className="text-[#b2946c] text-[9px] font-mono tracking-widest uppercase block mb-1 font-bold">
+                {CONCEPT_STUDY_IMAGES[conceptLightboxIndex].type}
+              </span>
+              <h4 className="text-white font-sans font-bold text-sm tracking-tight mb-1">
+                {CONCEPT_STUDY_IMAGES[conceptLightboxIndex].title}
+              </h4>
+              <p className="text-stone-400 text-xs leading-relaxed font-sans">
+                {CONCEPT_STUDY_IMAGES[conceptLightboxIndex].desc}
+              </p>
+            </div>
+            
+            {/* Index Counter */}
+            <span className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-xs text-stone-300 text-[10px] font-mono tracking-widest px-3 py-1.5 uppercase select-none rounded-xs">
+              {conceptLightboxIndex + 1} / {CONCEPT_STUDY_IMAGES.length}
             </span>
           </div>
         </div>
