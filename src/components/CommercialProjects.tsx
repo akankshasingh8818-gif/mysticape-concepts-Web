@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { X, ArrowLeft, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 // @ts-ignore
+import image_biophilic_new from "../assets/images/regenerated_image_1783147206872.jpg";
+// @ts-ignore
+import image_lobby_new from "../assets/images/regenerated_image_1783147209026.jpg";
+// @ts-ignore
 import image_focus from "../assets/images/regenerated_image_1781792862175.jpg";
 // @ts-ignore
 import image_meeting from "../assets/images/regenerated_image_1781792859792.jpg";
@@ -37,14 +41,14 @@ const COMMERCIAL_GALLERY_IMAGES: GalleryImage[] = [
     id: "comm-img-biophilic",
     title: "Biophilic Forest Nook",
     client: "WorldQuant Headquarters",
-    src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    src: image_biophilic_new,
     categories: ["Showrooms", "Retail", "Hospitality"]
   },
   {
     id: "comm-img-lobby",
     title: "Plenum Swivel Lobby Suite",
     client: "Grant Thornton Noida",
-    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    src: image_lobby_new,
     categories: ["Showrooms", "Retail", "Corporate Spaces"]
   },
   {
