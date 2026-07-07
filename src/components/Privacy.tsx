@@ -41,7 +41,7 @@ export default function Privacy() {
             4. Contacts
           </h2>
           <p>
-            If you wish to review, modify, or completely erase your submitted project brief logs from our archives, coordinate with our privacy desk at **infomysticapeconcepts@gmail.com**.
+            If you wish to review, modify, or completely erase your submitted project brief logs from our archives, coordinate with our privacy desk at **info@mysticapeconcepts.com**.
           </p>
           
           <hr className="border-stone-100 my-8" />

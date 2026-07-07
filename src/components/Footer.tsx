@@ -71,7 +71,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
             <div className="flex items-center space-x-2">
               <Mail className="w-3.5 h-3.5 text-[#b2946c]" />
               <span>
-                <a href="mailto:infomysticapeconcepts@gmail.com" className="hover:text-[#b2946c] transition-colors">infomysticapeconcepts@gmail.com</a>
+                <a href="mailto:info@mysticapeconcepts.com" className="hover:text-[#b2946c] transition-colors">info@mysticapeconcepts.com</a>
               </span>
             </div>
           </div>

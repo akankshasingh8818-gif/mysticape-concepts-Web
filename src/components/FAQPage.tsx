@@ -182,7 +182,7 @@ export default function FAQPage({ setCurrentPage }: FAQPageProps) {
                 <div>
                   <span className="block text-stone-400 text-[9px] uppercase font-mono">Email Inquiries</span>
                   <span>
-                    <a href="mailto:infomysticapeconcepts@gmail.com" className="hover:text-[#b2946c] transition-colors">infomysticapeconcepts@gmail.com</a>
+                    <a href="mailto:info@mysticapeconcepts.com" className="hover:text-[#b2946c] transition-colors">info@mysticapeconcepts.com</a>
                   </span>
                 </div>
               </div>

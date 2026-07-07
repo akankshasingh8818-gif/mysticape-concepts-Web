@@ -126,7 +126,7 @@ export default function Contact() {
                 <div className="text-xs">
                   <span className="font-sans font-semibold text-stone-950 block">Email</span>
                   <span className="text-stone-500 block mt-0.5">
-                    <a href="mailto:infomysticapeconcepts@gmail.com" className="hover:text-[#b2946c] transition-colors">infomysticapeconcepts@gmail.com</a>
+                    <a href="mailto:info@mysticapeconcepts.com" className="hover:text-[#b2946c] transition-colors">info@mysticapeconcepts.com</a>
                   </span>
                 </div>
               </div>
