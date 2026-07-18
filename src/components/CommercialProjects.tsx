@@ -34,6 +34,18 @@ import concept_executive_suite from "../assets/images/regenerated_image_17817928
 import concept_atrium_lounge from "../assets/images/regenerated_image_1783163614967.jpg";
 // @ts-ignore
 import image_linear_suites from "../assets/images/regenerated_image_1783163614967.jpg";
+// @ts-ignore
+import image_executive_boardroom_new from "../assets/images/regenerated_image_1783163343989.jpg";
+// @ts-ignore
+import image_ambient_corridor from "../assets/images/regenerated_image_1781792689724.jpg";
+// @ts-ignore
+import image_elysian_hub from "../assets/images/regenerated_image_1784378342320.jpg";
+// @ts-ignore
+import image_verdant_lounge from "../assets/images/regenerated_image_1784378344572.jpg";
+// @ts-ignore
+import image_aether_lightwell from "../assets/images/regenerated_image_1784378346559.jpg";
+// @ts-ignore
+import image_sovereign_office from "../assets/images/regenerated_image_1784378349558.jpg";
 
 interface CommercialProjectsProps {
   setCurrentPage?: (page: any) => void;
@@ -52,11 +64,53 @@ interface GalleryImage {
 
 const COMMERCIAL_GALLERY_IMAGES: GalleryImage[] = [
   {
+    id: "comm-img-elysian-hub",
+    title: "Elysian Executive Hub",
+    client: "Summit Chambers Noida",
+    src: image_elysian_hub,
+    categories: ["Offices", "Corporate Spaces"]
+  },
+  {
+    id: "comm-img-verdant-lounge",
+    title: "Verdant Lounge & Co-Working Atrium",
+    client: "Greenfield Capital Office",
+    src: image_verdant_lounge,
+    categories: ["Offices", "Corporate Spaces", "Hospitality"]
+  },
+  {
+    id: "comm-img-aether-lightwell",
+    title: "Aether Light-Well Meeting Lounge",
+    client: "Nexus Workspace Delhi",
+    src: image_aether_lightwell,
+    categories: ["Offices", "Corporate Spaces"]
+  },
+  {
+    id: "comm-img-sovereign-office",
+    title: "Sovereign Executive Office & Boardroom",
+    client: "Sovereign Wealth Delhi",
+    src: image_sovereign_office,
+    categories: ["Offices", "Corporate Spaces"]
+  },
+  {
     id: "comm-img-linear-suites",
     title: "Linear Modular Hot Desking & Agile Suites",
     client: "Evolve Ventures Noida",
     src: image_linear_suites,
     categories: ["Offices", "Corporate Spaces"]
+  },
+  {
+    id: "comm-img-executive-boardroom-new",
+    title: "Vanguard Executive Boardroom Suite",
+    client: "Mystic Ape Corporate Headquarters",
+    src: image_executive_boardroom_new,
+    categories: ["Offices", "Corporate Spaces"]
+  },
+  {
+    id: "comm-img-ambient-corridor",
+    title: "Linear Shadow-Path Gallery & Gallery Corridor",
+    client: "Capital Art Foundation Delhi",
+    src: image_ambient_corridor,
+    categories: ["Offices", "Corporate Spaces", "Showrooms"]
   },
   {
     id: "comm-img-biophilic",
@@ -73,6 +127,13 @@ const COMMERCIAL_GALLERY_IMAGES: GalleryImage[] = [
     categories: ["Showrooms", "Retail", "Corporate Spaces"]
   },
   {
+    id: "comm-img-unsplash-atrium",
+    title: "Plenum Open-Volume Collaborative Atrium",
+    client: "Vanguard Co-working Bangalore",
+    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    categories: ["Offices", "Corporate Spaces"]
+  },
+  {
     id: "comm-img-focus",
     title: "Terracotta Focus Pods",
     client: "Ampire Aerocity",
@@ -85,6 +146,13 @@ const COMMERCIAL_GALLERY_IMAGES: GalleryImage[] = [
     client: "Grant Thornton Delhi",
     src: image_meeting,
     categories: ["Showrooms", "Retail", "Offices", "Corporate Spaces"]
+  },
+  {
+    id: "comm-img-unsplash-boardroom",
+    title: "Minimalist Walnut Conference Suite",
+    client: "Ascent Financials Mumbai",
+    src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+    categories: ["Offices", "Corporate Spaces"]
   },
   {
     id: "comm-img-creative-studio",
@@ -101,10 +169,24 @@ const COMMERCIAL_GALLERY_IMAGES: GalleryImage[] = [
     categories: ["Offices", "Corporate Spaces"]
   },
   {
+    id: "comm-img-unsplash-apparel",
+    title: "Luxe Avant-Garde Apparel Showcase",
+    client: "Bespoke Threads Gurugram",
+    src: "https://images.unsplash.com/photo-1567401893930-79072f53b494?auto=format&fit=crop&w=1200&q=80",
+    categories: ["Showrooms", "Retail"]
+  },
+  {
     id: "comm-img-brainstorm",
     title: "Signature Glass Boardroom",
     client: "Evolve Ventures Noida",
     src: image_brainstorm_new,
+    categories: ["Offices", "Corporate Spaces"]
+  },
+  {
+    id: "comm-img-unsplash-zenith",
+    title: "The Zenith Double-Height Corporate Foyer",
+    client: "Zenith Realty Aerocity",
+    src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
     categories: ["Offices", "Corporate Spaces"]
   },
   {
@@ -122,11 +204,25 @@ const COMMERCIAL_GALLERY_IMAGES: GalleryImage[] = [
     categories: ["Showrooms", "Retail"]
   },
   {
+    id: "comm-img-unsplash-terrazzo",
+    title: "Drape & Loom Terrazzo Flagship Boutique",
+    client: "Drape & Loom Delhi",
+    src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+    categories: ["Showrooms", "Retail"]
+  },
+  {
     id: "comm-img-retail-atelier",
     title: "Atelier Curated Lounge",
     client: "Ethereal Apparel Group",
     src: image_retail_atelier,
     categories: ["Showrooms", "Retail"]
+  },
+  {
+    id: "comm-img-unsplash-hive",
+    title: "The Hive Agile Lounge & Creative Corner",
+    client: "Hive Collective Bengaluru",
+    src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+    categories: ["Offices", "Corporate Spaces"]
   }
 ];
 
