@@ -1,6 +1,31 @@
 import { useState, useEffect } from "react";
 import { X, ArrowLeft, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 
+// @ts-ignore
+import res_image_0 from "../assets/images/regenerated_image_1784528130975.jpg";
+// @ts-ignore
+import res_image_1 from "../assets/images/regenerated_image_1784528132627.jpg";
+// @ts-ignore
+import res_image_2 from "../assets/images/regenerated_image_1784528134369.jpg";
+// @ts-ignore
+import res_image_3 from "../assets/images/regenerated_image_1784528136161.jpg";
+// @ts-ignore
+import res_image_4 from "../assets/images/regenerated_image_1784528138044.jpg";
+// @ts-ignore
+import res_image_5 from "../assets/images/regenerated_image_1784528139965.jpg";
+// @ts-ignore
+import res_image_6 from "../assets/images/regenerated_image_1784528141703.jpg";
+// @ts-ignore
+import res_image_7 from "../assets/images/regenerated_image_1784528143181.jpg";
+// @ts-ignore
+import res_image_8 from "../assets/images/regenerated_image_1784528144889.jpg";
+// @ts-ignore
+import res_image_9 from "../assets/images/regenerated_image_1784528148003.jpg";
+// @ts-ignore
+import res_image_10 from "../assets/images/regenerated_image_1784528149799.jpg";
+// @ts-ignore
+import res_image_11 from "../assets/images/regenerated_image_1784528146463.jpg";
+
 interface ResidentialProjectsProps {
   selectedProject?: any;
   setSelectedProject?: (proj: any) => void;
@@ -9,18 +34,18 @@ interface ResidentialProjectsProps {
 }
 
 const RESIDENTIAL_IMAGES = [
-  "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1200&q=80", // Pooja temple corner
-  "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=80", // Curved luxury living room, metallic ceiling
-  "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80", // Damask master bedroom
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80", // White arch panels with green stools
-  "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80", // Beautiful sophisticated master bedroom interior with luxury wood bed and textured wall
-  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80", // Premium luxury modern living room with warm panels and lights
-  "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80", // Warm suite with herringbone wood floors
-  "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=1200&q=80", // Temple foyer / entrance timber screen
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80", // L-shaped white sofa under fluted wood panel with modular shelves
-  "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80", // Living room looking toward U-shaped couch & whiskey bar corner
-  "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1200&q=80", // Luxury dining room with exquisite modern layout and hanging chandelier
-  "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80", // Ultra-luxury white marble kitchen suite with premium pendant lighting and grand finishes
+  res_image_0, // Pooja temple corner
+  res_image_1, // Curved luxury living room, metallic ceiling
+  res_image_2, // Damask master bedroom
+  res_image_3, // White arch panels with green stools
+  res_image_4, // Beautiful sophisticated master bedroom interior with luxury wood bed and textured wall
+  res_image_5, // Premium luxury modern living room with warm panels and lights
+  res_image_6, // Warm suite with herringbone wood floors
+  res_image_7, // Temple foyer / entrance timber screen
+  res_image_8, // L-shaped white sofa under fluted wood panel with modular shelves
+  res_image_9, // Living room looking toward U-shaped couch & whiskey bar corner
+  res_image_10, // Luxury dining room with exquisite modern layout and hanging chandelier
+  res_image_11, // Ultra-luxury white marble kitchen suite with premium pendant lighting and grand finishes
   "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80", // Warm bedroom suite with crescent moon metal wall art
   "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80"  // Slab wall with white marble shelves and trophies
 ];
